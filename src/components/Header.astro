@@ -1,0 +1,57 @@
+---
+import Logo from "./Logo.astro";
+import MobileMenu from "./MobileMenu.tsx";
+
+interface Props {
+  active?: "home" | "about" | "skills";
+}
+const { active = "home" } = Astro.props;
+
+const links = [
+  { label: "About", href: "/about", key: "about" },
+  { label: "Skills", href: "/skills", key: "skills" },
+];
+---
+
+<header
+  class="sticky top-0 z-40 border-b border-brand/[0.08] bg-paper/70 backdrop-blur-lg"
+>
+  <div
+    class="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-4 md:px-10"
+  >
+    <a href="/" class="flex items-center gap-3 text-ink">
+      <Logo class="h-[34px] w-[34px]" />
+      <span
+        class="font-display text-[16.5px] font-bold tracking-[-0.01em]"
+        >Kelsi Anderson</span
+      >
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden items-center gap-8 md:flex">
+      {
+        links.map((link) => (
+          <a
+            href={link.href}
+            class:list={[
+              "text-[15px]",
+              active === link.key
+                ? "font-semibold text-ink"
+                : "font-medium text-muted hover:text-ink",
+            ]}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+      <a
+        href="#contact"
+        class="inline-flex items-center gap-2 rounded-full bg-ink px-[18px] py-2.5 text-[14.5px] font-semibold text-white transition-opacity hover:opacity-90"
+        >Get in touch</a
+      >
+    </nav>
+
+    <!-- Mobile nav (interactive island) -->
+    <MobileMenu client:load active={active} />
+  </div>
+</header>

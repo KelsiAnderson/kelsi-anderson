@@ -1,0 +1,26 @@
+---
+/** Brand mark: the "k" tile. `variant` controls the tile treatment. */
+interface Props {
+  variant?: "brand" | "light";
+  class?: string;
+}
+const { variant = "brand", class: className = "" } = Astro.props;
+const tile =
+  variant === "light"
+    ? "bg-white"
+    : "bg-linear-140 from-brand to-brand-dark";
+const glyphFill = variant === "light" ? "#6A45F3" : "#ffffff";
+---
+
+<span class={`inline-grid place-items-center rounded-[10px] ${tile} ${className}`}>
+  <svg viewBox="0 0 64 64" class="h-full w-full" aria-hidden="true">
+    <text
+      x="17"
+      y="48"
+      font-family="Schibsted Grotesk, sans-serif"
+      font-size="44"
+      font-weight="800"
+      fill={glyphFill}>k</text>
+    <circle cx="47" cy="47" r="6" fill="#E169C9"></circle>
+  </svg>
+</span>

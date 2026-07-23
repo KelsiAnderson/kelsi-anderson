@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+/* ── Kelsi Anderson design tokens ─────────────────────────────
+   Ported from the design export. Registering these under @theme
+   generates matching utilities (bg-brand, text-ink, font-display…). */
+@theme {
+  --font-display: "Schibsted Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+
+  /* surfaces */
+  --color-paper: #faf8fd;
+  --color-surface: #f3effb;
+  --color-chip: #f1ecfe;
+
+  /* ink / dark sections */
+  --color-ink: #171420;
+  --color-ink-800: #221e30;
+  --color-ink-700: #302c3c;
+  --color-ink-line: #2c2740;
+  --color-ink-line-2: #322c44;
+
+  /* brand */
+  --color-brand: #6a45f3;
+  --color-brand-dark: #4b2fbf;
+  --color-brand-deep: #3f2aa8;
+  --color-brand-light: #8a6bf7;
+  --color-accent: #e169c9;
+  --color-lilac: #c9b6ff;
+
+  /* text */
+  --color-muted: #4a4558;
+  --color-muted-2: #6b6580;
+  --color-muted-3: #8a83a0;
+  --color-mist: #a79fc0;
+
+  /* lines */
+  --color-line: #eae4f5;
+  --color-line-2: #e5ddf3;
+  --color-line-3: #e4dafb;
+  --color-line-4: #ded2fc;
+
+  /* status */
+  --color-success: #29c46a;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--color-line-4);
+    color: var(--color-ink);
+  }
+}

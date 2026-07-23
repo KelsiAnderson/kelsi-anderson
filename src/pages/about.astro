@@ -1,0 +1,267 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Contact from "../components/Contact.astro";
+import Logo from "../components/Logo.astro";
+
+const darkEyebrow =
+  "inline-block rounded-full border border-ink-line-2 px-[15px] py-[7px] text-[12.5px] font-semibold uppercase tracking-[0.06em] text-lilac";
+const lightEyebrow =
+  "inline-block rounded-full border border-line-4 px-[15px] py-[7px] text-[12.5px] font-semibold uppercase tracking-[0.06em] text-brand";
+
+const principles = [
+  {
+    title: "Trust is the deliverable",
+    body: "A demo isn't a performance. Say what the product can't do as clearly as what it can — that's what earns the next conversation.",
+    path: "M12 2a10 10 0 1 0 10 10 M12 6v6l4 2",
+  },
+  {
+    title: "Specifics beat adjectives",
+    body: "Name the system, the metric, the outcome. Concrete detail builds credibility faster than any superlative.",
+    path: "M20 6 9 17l-5-5",
+  },
+  {
+    title: "Everyone in the room wins",
+    body: "Engineering, security, product, the customer — good technical work aligns them instead of forcing a trade-off.",
+    path: "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2 M9 7a4 4 0 1 0 0-0.01 M22 21v-2a4 4 0 0 0-3-3.87",
+  },
+];
+
+const steps = [
+  {
+    n: "01",
+    title: "Listen for the real problem",
+    body: "I run structured discovery to surface architectural dependencies and unspoken constraints early — before they become the reason a deal or a project stalls.",
+  },
+  {
+    n: "02",
+    title: "Translate, don't dumb down",
+    body: "Clear enough for a VP, precise enough for an engineer. I meet each stakeholder where they are without losing the technical truth.",
+  },
+  {
+    n: "03",
+    title: "Build the thing that proves it",
+    body: "A status page, a lookup tool, a working prototype — I'd rather show something real than describe it. Proof beats promise.",
+  },
+  {
+    n: "04",
+    title: "Stay for the follow-through",
+    body: "Incident response taught me the relationship is made after the sale — in how you show up when something breaks.",
+  },
+];
+
+const facts = [
+  ["Documentation nerd", "I genuinely love good docs. Migrating Auth0's was a highlight, not a chore."],
+  ["Security-minded", "Being Security Champion rewired how I weigh risk against velocity."],
+  ["Pacific Northwest", "Seattle-based and remote-native, coffee non-negotiable."],
+  ["Perpetual builder", "Always poking at a new idea or side project on the weekend."],
+];
+---
+
+<Layout
+  active="about"
+  title="About — Kelsi Anderson"
+  description="Kelsi Anderson's story: five years as a software engineer at Okta and Auth0, now moving into sales engineering."
+>
+  <!-- INTRO -->
+  <section class="bg-[linear-gradient(160deg,#EFEAFE_0%,#F4ECFB_50%,#FBEAF3_100%)]">
+    <div
+      class="mx-auto grid max-w-[1200px] items-center gap-12 px-6 py-16 md:grid-cols-[1.1fr_0.9fr] md:gap-16 md:px-10 md:py-20"
+    >
+      <div>
+        <span
+          class="inline-block rounded-full border border-line-3 bg-white px-[15px] py-[7px] text-[12.5px] font-semibold uppercase tracking-[0.06em] text-brand"
+          >About Kelsi</span
+        >
+        <h1
+          class="mt-6 font-display text-[clamp(2.5rem,5.2vw,4.375rem)] font-extrabold leading-none tracking-[-0.03em] text-balance"
+        >
+          I build things that <span class="text-brand"
+            >improve people's relationships.</span
+          >
+        </h1>
+        <p class="mt-6 max-w-[52ch] text-[19px] leading-[1.62] text-muted">
+          Whether I'm designing software, leading a technical initiative, or
+          exploring a new idea, that's the thread — and it's why I'm moving from
+          building the product to being in the room with the people who depend
+          on it.
+        </p>
+      </div>
+
+      <!-- Branded panel (stands in for a portrait) -->
+      <div class="relative">
+        <div
+          class="relative grid h-[360px] place-items-center overflow-hidden rounded-[28px] bg-[linear-gradient(150deg,#6A45F3,#E169C9)] shadow-[0_30px_60px_-24px_rgba(75,47,191,0.45)] md:h-[440px]"
+        >
+          <Logo variant="light" class="h-24 w-24 rounded-[24px] opacity-95" />
+        </div>
+        <div
+          class="absolute -bottom-5 -left-4 rounded-2xl bg-white p-[15px_19px] shadow-[0_16px_34px_-14px_rgba(23,20,32,0.3)]"
+        >
+          <div class="text-[12.5px] text-muted-2">Based in</div>
+          <div class="mt-0.5 font-display text-[16px] font-bold">
+            Seattle, WA · Remote
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section
+    class="mx-auto grid max-w-[1200px] gap-12 px-6 py-20 md:grid-cols-[0.8fr_1.2fr] md:gap-[72px] md:px-10 md:py-24"
+  >
+    <div>
+      <span class={lightEyebrow}>My story</span>
+      <h2
+        class="mt-[22px] font-display text-[clamp(1.75rem,3.4vw,2.75rem)] font-bold leading-[1.06] tracking-[-0.02em]"
+      >
+        From shipping the system to standing behind it.
+      </h2>
+    </div>
+    <div>
+      <p class="text-[18px] leading-[1.68] text-ink-700">
+        I spent five years as a software engineer and technical leader at Okta
+        and Auth0, owning architecture for platforms that enterprise customers
+        bet their business on. I built a status page they could trust during
+        incidents, internal tooling that turned minutes of digging into seconds,
+        and led migrations delivered at 100% on time.
+      </p>
+      <p class="mt-[22px] text-[17px] leading-[1.68] text-muted">
+        But the part I kept gravitating toward was never the stack. It was the
+        discovery session where I got three teams to finally agree on what we
+        were building. It was translating a compliance requirement into a
+        decision a room could actually act on. It was watching a support
+        engineer's face when the tool I built handed them an answer in seconds
+        instead of minutes.
+      </p>
+      <p class="mt-[22px] text-[17px] leading-[1.68] text-muted">
+        That's the work of a sales engineer: being fluent enough in the
+        technology to earn trust, and human enough to make it land. I want to do
+        it full-time — deep in a customer's problem, connecting what's
+        technically true to what they actually need.
+      </p>
+      <blockquote
+        class="mt-9 rounded-[18px] border-l-4 border-brand bg-surface p-[24px_28px]"
+      >
+        <p
+          class="font-display text-[21px] font-semibold leading-[1.4] tracking-[-0.01em]"
+        >
+          "I'm happiest when I'm building something that improves people's lives
+          — especially their relationships."
+        </p>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- PRINCIPLES -->
+  <section class="bg-surface">
+    <div class="mx-auto max-w-[1200px] px-6 py-20 md:px-10 md:py-24">
+      <span class={lightEyebrow}>What I believe</span>
+      <h2
+        class="mt-5 font-display text-[clamp(1.75rem,3.4vw,2.625rem)] font-bold tracking-[-0.02em]"
+      >
+        Principles I bring to every room.
+      </h2>
+      <div class="mt-11 grid gap-[22px] md:grid-cols-3">
+        {
+          principles.map((p) => (
+            <div class="rounded-[20px] border border-line-2 bg-white p-[30px]">
+              <div class="mb-[18px] grid h-11 w-11 place-items-center rounded-[13px] bg-[linear-gradient(140deg,#6A45F3,#4B2FBF)]">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="22"
+                  height="22"
+                  fill="none"
+                  stroke="#fff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d={p.path} />
+                </svg>
+              </div>
+              <div class="font-display text-[19px] font-bold">{p.title}</div>
+              <p class="mt-2.5 text-[15px] leading-[1.58] text-muted">
+                {p.body}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW I WORK -->
+  <section class="mx-auto max-w-[1200px] px-6 py-20 md:px-10 md:py-24">
+    <div class="grid gap-12 md:grid-cols-[0.8fr_1.2fr] md:gap-[72px]">
+      <div>
+        <span class={lightEyebrow}>How I work</span>
+        <h2
+          class="mt-[22px] font-display text-[clamp(1.75rem,3.4vw,2.625rem)] font-bold leading-[1.06] tracking-[-0.02em]"
+        >
+          Discovery first. Always.
+        </h2>
+        <p class="mt-5 text-[16px] leading-[1.6] text-muted-2">
+          The habits that made me a good engineer are the same ones that make a
+          good sales engineer.
+        </p>
+      </div>
+      <div class="flex flex-col">
+        {
+          steps.map((s) => (
+            <div class="grid grid-cols-[44px_1fr] gap-5 border-t border-line py-6 sm:grid-cols-[56px_1fr]">
+              <span class="font-display text-[24px] font-extrabold tracking-[-0.02em] text-lilac">
+                {s.n}
+              </span>
+              <div>
+                <div class="font-display text-[18px] font-semibold">
+                  {s.title}
+                </div>
+                <p class="mt-1.5 text-[15.5px] leading-[1.58] text-muted">
+                  {s.body}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- BEYOND WORK -->
+  <section class="bg-ink text-white">
+    <div class="mx-auto max-w-[1200px] px-6 py-20 md:px-10 md:py-24">
+      <div class="grid items-center gap-12 md:grid-cols-2 md:gap-[60px]">
+        <div>
+          <span class={darkEyebrow}>Beyond the work</span>
+          <h2
+            class="mt-5 font-display text-[clamp(1.75rem,3.4vw,2.625rem)] font-bold leading-[1.06] tracking-[-0.02em]"
+          >
+            A few true things about me.
+          </h2>
+          <p class="mt-5 text-[16.5px] leading-[1.62] text-mist">
+            The relationships thread doesn't stop at the office. Ask me about any
+            of these and I'll happily talk your ear off.
+          </p>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2">
+          {
+            facts.map(([title, body]) => (
+              <div class="rounded-[18px] border border-ink-line-2 bg-ink-800 p-6">
+                <div class="font-display text-[16px] font-bold text-lilac">
+                  {title}
+                </div>
+                <p class="mt-2 text-[14px] leading-[1.5] text-mist">{body}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Contact
+    title="Like how I think? Let's talk."
+    subtitle="I'm looking for a sales engineering role where I can go deep with customers. If that's you, I'd love to hear from you."
+  />
+</Layout>
