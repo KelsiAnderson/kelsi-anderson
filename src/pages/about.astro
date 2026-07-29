@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Contact from "../components/Contact.astro";
-import Logo from "../components/Logo.astro";
 
 const darkEyebrow =
   "inline-block rounded-full border border-ink-line-2 px-[15px] py-[7px] text-[12.5px] font-semibold uppercase tracking-[0.06em] text-lilac";
@@ -87,12 +86,16 @@ const facts = [
         </p>
       </div>
 
-      <!-- Branded panel (stands in for a portrait) -->
+      <!-- Portrait -->
       <div class="relative">
         <div
-          class="relative grid h-[360px] place-items-center overflow-hidden rounded-[28px] bg-[linear-gradient(150deg,#6A45F3,#E169C9)] shadow-[0_30px_60px_-24px_rgba(75,47,191,0.45)] md:h-[440px]"
+          class="relative aspect-[4/5] overflow-hidden rounded-[28px] shadow-[0_30px_60px_-24px_rgba(75,47,191,0.45)]"
         >
-          <Logo variant="light" class="h-24 w-24 rounded-[24px] opacity-95" />
+          <img
+            src="/images/kelsi.jpg"
+            alt="Kelsi Anderson"
+            class="h-full w-full object-cover object-[27%_25%]"
+          />
         </div>
         <div
           class="absolute -bottom-5 -left-4 rounded-2xl bg-white p-[15px_19px] shadow-[0_16px_34px_-14px_rgba(23,20,32,0.3)]"
