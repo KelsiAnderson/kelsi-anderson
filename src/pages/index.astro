@@ -56,18 +56,19 @@ const experience = [
       <div>
         <span
           class="inline-block rounded-full bg-chip px-[15px] py-[7px] text-[13px] font-semibold text-brand"
-          >Software Engineer → Sales Engineer</span
+          >Software Engineer → Solutions Engineer</span
         >
         <h1
           class="mt-5 font-display text-[clamp(2.5rem,5vw,4.125rem)] font-extrabold leading-[1.02] tracking-[-0.03em]"
         >
-          I build the bridge between the code and the <span class="text-brand"
-            >customer.</span
+          I build systems enterprises trust — and I'm the one who can explain <span class="text-brand"
+            >why they hold.</span
           >
         </h1>
         <p class="mt-5 max-w-[46ch] text-[18px] leading-relaxed text-muted">
-          Five years building platform, security, and reliability at Okta &amp;
-          Auth0 — now in front of the customers who depend on it.
+          Five years owning identity, platform, and security architecture at
+          Okta and Auth0. Now looking to bring that depth into the room, with
+          the customers staking their business on it.
         </p>
         <div class="mt-8 flex flex-wrap gap-3.5">
           <a
@@ -192,9 +193,9 @@ const experience = [
     </div>
     <div>
       <p class="text-[19px] leading-[1.65] text-ink-700">
-        Whether I'm designing software, leading a technical initiative, or
-        exploring a new idea, I'm happiest when I'm building something that
-        improves people's lives — especially their relationships.
+        Five years designing the systems enterprise customers depend on taught
+        me something the roadmap never will: the hardest problem is rarely
+        technical. It's getting the right people to trust the decision.
       </p>
       <p class="mt-[22px] text-[17px] leading-[1.65] text-muted">
         For five years at Okta and Auth0 I've owned architecture for platforms
@@ -202,7 +203,7 @@ const experience = [
         incidents, internal tooling that turns minutes of digging into seconds,
         migrations delivered at 100%. The through-line was never the stack. It
         was translating between the people who build the system and the people
-        who rely on it. That's the work I want to do full-time as a sales
+        who rely on it. That's the work I want to do full-time as a solutions
         engineer.
       </p>
       <div class="mt-9 flex flex-wrap gap-x-11 gap-y-6">
@@ -273,43 +274,45 @@ const experience = [
     >
       Things I built that people relied on.
     </h2>
-    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      <article
-        class="flex flex-col overflow-hidden rounded-[22px] border border-line bg-white"
-      >
-        <div
-          class="grid h-[190px] place-items-center border-b border-[#EFEAFB] bg-[linear-gradient(135deg,#EFEAFE,#FBEAF3)]"
+    <!-- FLAGSHIP CASE STUDY -->
+    <article
+      class="mt-12 overflow-hidden rounded-[22px] border border-line bg-white"
+    >
+      <div class="p-[30px] md:p-10">
+        <span class="font-mono text-[12px] tracking-[0.02em] text-muted-3"
+          >FLAGSHIP · 0→1 · ENTERPRISE</span
         >
-          <div
-            class="-mb-px w-[74%] rounded-t-xl bg-white p-4 shadow-[0_12px_30px_-12px_rgba(75,47,191,0.35)]"
-          >
-            <div class="flex items-center justify-between">
-              <span class="text-[12px] font-semibold">Okta Status</span>
-              <span
-                class="inline-flex items-center gap-1.5 text-[11px] font-semibold text-success"
-                ><span class="h-1.5 w-1.5 rounded-full bg-success"></span
-                >Operational</span
-              >
-            </div>
-            <div class="mt-3 h-1.5 w-full rounded-[3px] bg-success"></div>
-            <div class="mt-[7px] h-1.5 w-4/5 rounded-[3px] bg-[#DCEFE3]"></div>
-          </div>
+        <h3
+          class="mt-2 font-display text-[24px] font-bold tracking-[-0.01em] md:text-[26px]"
+        >
+          Okta Private Cloud Status Page
+        </h3>
+        <p class="mt-3 max-w-[68ch] text-[15px] leading-[1.6] text-muted">
+          During an incident, enterprise customers had no reliable way to
+          tell whether it was their tenant or the broader platform — every
+          ambiguous minute became a support ticket. I owned the architecture
+          end to end: designing environment-specific status visibility,
+          building it, and presenting the approach to the internal
+          stakeholders who had to trust it before it shipped.
+        </p>
+        <p class="mt-3 max-w-[68ch] text-[15px] leading-[1.6] text-muted">
+          The hard part wasn't showing status — it was scoping it correctly.
+          A company could have multiple tenants, and each tenant could have
+          multiple people looking at it, so the architecture had to
+          guarantee one customer's incident never leaked into another's
+          view, no matter how many tenants or seats sat on either side.
+        </p>
+        <div
+          class="mt-5 text-[13.5px] leading-[1.5] text-muted-2"
+        >
+          <span class="font-semibold text-ink">My role:</span> Sole architect
+          and engineer, 0→1. Presented design and rollout plan directly to
+          stakeholders.
         </div>
-        <div class="flex flex-1 flex-col p-[26px]">
-          <span class="font-mono text-[12px] tracking-[0.02em] text-muted-3"
-            >0→1 · ENTERPRISE</span
-          >
-          <h3 class="mt-2 font-display text-[20px] font-bold tracking-[-0.01em]">
-            Auth0 Status Page
-          </h3>
-          <p class="mt-2.5 text-[14.5px] leading-[1.55] text-muted">
-            Led end-to-end architecture for environment-specific status
-            visibility — giving enterprise customers accurate, real-time insight
-            during critical incidents and cutting status-related support tickets.
-          </p>
-        </div>
-      </article>
+      </div>
+    </article>
 
+    <div class="mt-6 grid gap-6 sm:grid-cols-2">
       <article
         class="flex flex-col overflow-hidden rounded-[22px] border border-line bg-white"
       >
@@ -345,7 +348,7 @@ const experience = [
       </article>
 
       <article
-        class="flex flex-col overflow-hidden rounded-[22px] border border-line bg-white sm:col-span-2 lg:col-span-1"
+        class="flex flex-col overflow-hidden rounded-[22px] border border-line bg-white"
       >
         <div
           class="grid h-[190px] place-items-center bg-[linear-gradient(135deg,#EFEAFE,#E6DEFB)]"
